@@ -1,0 +1,44 @@
+.simplify {
+	height: auto;
+	background-color: $bright-red;
+	position: relative;
+	overflow: hidden;
+
+	&__bg {
+		&-desktop {
+			position: absolute;
+			right: 0;
+		}
+
+		&-mobile {
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include breakpoint-up(large) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__title {
+		color: $very-pale-red;
+		@include breakpoint-up(large) {
+			max-width: 40rem;
+			text-align: left;
+		}
+	}
+
+	button {
+		color: $bright-red;
+		background-color: $very-pale-red;
+		z-index: 0;
+	}
+}

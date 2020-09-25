@@ -1,0 +1,29 @@
+.testimonials {
+	&__title {
+		margin-bottom: 5rem;
+	}
+
+	&__button {
+		margin-top: 3rem;
+	}
+}
+
+.testimonial {
+	background-color: $very-light-gray;
+	padding: 1rem 5rem;
+	height: auto;
+
+	@include breakpoint-up(large) {
+		padding: 0.8rem 4rem;
+		width: 55rem !important;
+	}
+
+	&__image {
+		width: 7rem;
+		margin-top: -4rem;
+	}
+
+	&__name {
+		margin-top: 2rem;
+	}
+}

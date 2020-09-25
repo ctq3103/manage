@@ -1,0 +1,173 @@
+html {
+	font-size: 50%;
+	@include breakpoint-up(large) {
+		font-size: 62.5%;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-primary;
+	color: $very-dark-blue;
+	line-height: 1.4;
+	font-size: 1.6rem;
+	font-weight: 400;
+	overflow-x: hidden;
+	text-align: center;
+
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 700;
+	line-height: 1.5;
+	color: $very-dark-blue;
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 4.2rem;
+	margin-bottom: 1.5rem;
+}
+
+h2 {
+	font-size: 3.5rem;
+	margin-bottom: 1.5rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+}
+
+p {
+	font-size: 1.6rem;
+	margin: 2.5rem 0;
+	color: $dark-grayish-blue;
+}
+
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+	color: $dark-blue;
+	font-weight: 600;
+}
+
+.container {
+	max-width: 110rem;
+	margin: 0 auto;
+
+	&--pall {
+		padding-top: 4.4rem;
+		padding-bottom: 4.4rem;
+		padding-right: 2rem;
+		padding-left: 2rem;
+
+		@include breakpoint-up(large) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+
+	&--py {
+		padding-top: 4.4rem;
+		padding-bottom: 4.4rem;
+
+		@include breakpoint-up(large) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+	&--px {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+	&--pt {
+		padding-top: 4.4rem;
+		@include breakpoint-up(large) {
+			padding-top: 6rem;
+		}
+	}
+	&--pr {
+		padding-right: 2rem;
+	}
+	&--pb {
+		padding-bottom: 4.4rem;
+		@include breakpoint-up(large) {
+			padding-bottom: 6rem;
+		}
+	}
+	&--pl {
+		padding-left: 2rem;
+	}
+}
+
+.flex {
+	display: flex;
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+button,
+.button {
+	display: inline-block;
+	padding: 1.2rem 2.8rem;
+	background: $bright-red;
+	border-radius: 5rem;
+	border: 0;
+	color: $very-light-gray;
+	cursor: pointer;
+	box-shadow: 0 0.5rem 1rem rgba($bright-red, 0.5);
+	font-weight: 600;
+	font-size: 1.2rem;
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.hide-for-mobile {
+	@include breakpoint-down(medium) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	@include breakpoint-up(large) {
+		display: none;
+	}
+}
+
+span.swiper-pagination-bullet-active {
+	background-color: $bright-red !important;
+}
+
+span.swiper-pagination-bullet {
+	border: 1px solid $bright-red;
+	background-color: #fff;
+	opacity: 1 !important;
+}

@@ -1,0 +1,58 @@
+.hero {
+	position: relative;
+
+	&__bg {
+		position: absolute;
+		top: -20rem;
+		right: 0;
+		transform: translate(25%, 0%);
+		z-index: -2;
+		max-width: 65rem;
+		overflow-x: hidden;
+
+		@include breakpoint-up(large) {
+			top: -12rem;
+			right: 0;
+			transform: translate(10%, -10%);
+		}
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		@include breakpoint-up(large) {
+			flex-direction: row;
+		}
+	}
+
+	&__image {
+		width: 90%;
+		z-index: -1;
+
+		@include breakpoint-up(large) {
+			flex: 3;
+			order: 2;
+		}
+	}
+
+	&__text {
+		//margin: 0;
+		@include breakpoint-up(large) {
+			flex: 3;
+			order: 1;
+			text-align: left;
+			margin-right: 12rem;
+		}
+	}
+
+	&__description {
+		@include breakpoint-up(large) {
+			max-width: 38rem;
+			padding: 2.5rem auto;
+		}
+	}
+}
